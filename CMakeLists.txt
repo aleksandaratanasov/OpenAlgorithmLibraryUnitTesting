@@ -11,8 +11,11 @@ endif()
 # Locate GTest
 link_directories(/usr/lib/gtest/)         # Add folder where the .so/.dll files are located
 include_directories(/usr/include/gtest)   # Add folder where the include files are located
+set(headers
+  equalArrays.h
+)
 
 aux_source_directory(. SRC_LIST)
-add_executable(${PROJECT_NAME} ${SRC_LIST})
+add_executable(${PROJECT_NAME} ${headers} ${SRC_LIST})
 target_link_libraries(${PROJECT_NAME} gtest gtest_main) # Link the library (e.g. libgtest_main.so on Linux)
 
