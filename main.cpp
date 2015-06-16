@@ -20,7 +20,7 @@
 #include "randomstring.h"
 #include "equalArrays.h"
 
-#define SIZE 100000
+#define SIZE 1000
 
 using std::string;
 
@@ -32,7 +32,7 @@ std::fstream file;
 
 /******************************************************************************************************************
  * INSERTION SORT
- * NOT WORKING: with Guard and index transformation
+ *
  ******************************************************************************************************************/
 TEST(doubleT, insertionSortNormal) {
   size_t i = 0;
@@ -59,7 +59,7 @@ TEST(doubleT, insertionSortNormal) {
   EXPECT_TRUE(equal<double>((*a),(*tmp)));
 
   // Check if the sorted array is indeed sorted (this is actually not requires since equal also means that the sorted array is the same as the SORTED original one)
-  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
+//  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
 
 //  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new_sorted: " << (*a)[i] << std::endl;
   delete a;
@@ -91,7 +91,7 @@ TEST(doubleT, insertionSortWithGuard) {
   EXPECT_TRUE(equal<double>((*a),(*tmp)));
 
   // Check if the sorted array is indeed sorted (this is actually not requires since equal also means that the sorted array is the same as the SORTED original one)
-  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
+//  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
 
 //  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new_sorted: " << (*a)[i] << std::endl;
   delete a;
@@ -155,7 +155,7 @@ TEST(intT, insertionSortNormal) {
   EXPECT_TRUE(equal<int>((*a),(*tmp)));
 
   // Check if the sorted array is indeed sorted (this is actually not requires since equal also means that the sorted array is the same as the SORTED original one)
-  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
+//  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
 
 //  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new_sorted: " << (*a)[i] << std::endl;
   delete a;
@@ -187,7 +187,7 @@ TEST(intT, insertionSortWithGuard) {
   EXPECT_TRUE(equal<int>((*a),(*tmp)));
 
   // Check if the sorted array is indeed sorted (this is actually not requires since equal also means that the sorted array is the same as the SORTED original one)
-  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
+//  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
 
 //  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new_sorted: " << (*a)[i] << std::endl;
   delete a;
@@ -219,7 +219,7 @@ TEST(intT, insertionSortWithGuard) {
   EXPECT_TRUE(equal<int>((*a),(*tmp)));
 
   // Check if the sorted array is indeed sorted (this is actually not requires since equal also means that the sorted array is the same as the SORTED original one)
-  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
+//  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
 
 //  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new_sorted: " << (*a)[i] << std::endl;
   delete a;
@@ -251,7 +251,7 @@ TEST(stringT, insertionSortNormal) {
   EXPECT_TRUE(equal<string>((*a),(*tmp)));
 
   // Check if the sorted array is indeed sorted (this is actually not requires since equal also means that the sorted array is the same as the SORTED original one)
-  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
+//  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
 
 //  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new_sorted: " << (*a)[i] << std::endl;
   delete a;
@@ -283,7 +283,7 @@ TEST(stringT, insertionSortWithGuard) {
   EXPECT_TRUE(equal<string>((*a),(*tmp)));
 
   // Check if the sorted array is indeed sorted (this is actually not requires since equal also means that the sorted array is the same as the SORTED original one)
-  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
+//  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
 
 //  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new_sorted: " << (*a)[i] << std::endl;
   delete a;
@@ -315,7 +315,7 @@ TEST(stringT, insertionSortWithGuard) {
   EXPECT_TRUE(equal<string>((*a),(*tmp)));
 
   // Check if the sorted array is indeed sorted (this is actually not requires since equal also means that the sorted array is the same as the SORTED original one)
-  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
+//  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
 
 //  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new_sorted: " << (*a)[i] << std::endl;
   delete a;
@@ -351,7 +351,7 @@ TEST(doubleT, heapSort) {
   EXPECT_TRUE(equal<double>((*a),(*tmp)));
 
   // Check if the sorted array is indeed sorted (this is actually not requires since equal also means that the sorted array is the same as the SORTED original one)
-  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
+//  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
 
 //  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new_sorted: " << (*a)[i] << std::endl;
   delete a;
@@ -383,7 +383,7 @@ TEST(intT, heapSort) {
   EXPECT_TRUE(equal<int>((*a),(*tmp)));
 
   // Check if the sorted array is indeed sorted (this is actually not requires since equal also means that the sorted array is the same as the SORTED original one)
-  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
+//  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
 
 //  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new_sorted: " << (*a)[i] << std::endl;
   delete a;
@@ -415,7 +415,7 @@ TEST(stringT, heapSort) {
   EXPECT_TRUE(equal<string>((*a),(*tmp)));
 
   // Check if the sorted array is indeed sorted (this is actually not requires since equal also means that the sorted array is the same as the SORTED original one)
-  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
+//  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
 
 //  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new_sorted: " << (*a)[i] << std::endl;
   delete a;
@@ -451,7 +451,7 @@ TEST(doubleT, shellSort) {
   EXPECT_TRUE(equal<double>((*a),(*tmp)));
 
   // Check if the sorted array is indeed sorted (this is actually not requires since equal also means that the sorted array is the same as the SORTED original one)
-  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
+//  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
 
 //  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new_sorted: " << (*a)[i] << std::endl;
   delete a;
@@ -483,7 +483,7 @@ TEST(intT, shellSort) {
   EXPECT_TRUE(equal<int>((*a),(*tmp)));
 
   // Check if the sorted array is indeed sorted (this is actually not requires since equal also means that the sorted array is the same as the SORTED original one)
-  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
+//  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
 
 //  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new_sorted: " << (*a)[i] << std::endl;
   delete a;
@@ -515,7 +515,7 @@ TEST(stringT, shellSort) {
   EXPECT_TRUE(equal<string>((*a),(*tmp)));
 
   // Check if the sorted array is indeed sorted (this is actually not requires since equal also means that the sorted array is the same as the SORTED original one)
-  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
+//  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
 
 //  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new_sorted: " << (*a)[i] << std::endl;
   delete a;
@@ -524,7 +524,7 @@ TEST(stringT, shellSort) {
 
 /******************************************************************************************************************
  * MERGESORT SORT
- * NOT WORKING: natural
+ *
  ******************************************************************************************************************/
 TEST(doubleT, mergeSortNatural) {
   size_t i = 0;
@@ -551,7 +551,7 @@ TEST(doubleT, mergeSortNatural) {
   EXPECT_TRUE(equal<double>((*a),(*tmp)));
 
   // Check if the sorted array is indeed sorted (this is actually not requires since equal also means that the sorted array is the same as the SORTED original one)
-  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
+//  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
 
 //  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new_sorted: " << (*a)[i] << std::endl;
   delete a;
@@ -587,7 +587,7 @@ TEST(doubleT, mergeSortBottomUp) {
   delete tmp;
 }
 
-/*TEST(intT, mergeSortNatural) {
+TEST(intT, mergeSortNatural) {
   size_t i = 0;
   int t;
   // Allocate memory for the array that will store all numbers from the file
@@ -612,12 +612,12 @@ TEST(doubleT, mergeSortBottomUp) {
   EXPECT_TRUE(equal<int>((*a),(*tmp)));
 
   // Check if the sorted array is indeed sorted (this is actually not requires since equal also means that the sorted array is the same as the SORTED original one)
-  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
+//  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
 
 //  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new_sorted: " << (*a)[i] << std::endl;
   delete a;
   delete tmp;
-}*/
+}
 
 TEST(intT, mergeSortBottomUp) {
   size_t i = 0;
@@ -644,14 +644,14 @@ TEST(intT, mergeSortBottomUp) {
   EXPECT_TRUE(equal<int>((*a),(*tmp)));
 
   // Check if the sorted array is indeed sorted (this is actually not requires since equal also means that the sorted array is the same as the SORTED original one)
-  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
+//  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
 
 //  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new_sorted: " << (*a)[i] << std::endl;
   delete a;
   delete tmp;
 }
 
-/*TEST(stringT, mergeSortNatural) {
+TEST(stringT, mergeSortNatural) {
   size_t i = 0;
   string t;
   // Allocate memory for the array that will store all numbers from the file
@@ -676,12 +676,12 @@ TEST(intT, mergeSortBottomUp) {
   EXPECT_TRUE(equal<string>((*a),(*tmp)));
 
   // Check if the sorted array is indeed sorted (this is actually not requires since equal also means that the sorted array is the same as the SORTED original one)
-  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
+//  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
 
 //  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new_sorted: " << (*a)[i] << std::endl;
   delete a;
   delete tmp;
-}*/
+}
 
 TEST(stringT, mergeSortBottomUp) {
   size_t i = 0;
@@ -708,7 +708,7 @@ TEST(stringT, mergeSortBottomUp) {
   EXPECT_TRUE(equal<string>((*a),(*tmp)));
 
   // Check if the sorted array is indeed sorted (this is actually not requires since equal also means that the sorted array is the same as the SORTED original one)
-  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
+//  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
 
 //  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new_sorted: " << (*a)[i] << std::endl;
   delete a;
@@ -744,7 +744,7 @@ TEST(doubleT, quicksortNormal) {
   EXPECT_TRUE(equal<double>((*a),(*tmp)));
 
   // Check if the sorted array is indeed sorted (this is actually not requires since equal also means that the sorted array is the same as the SORTED original one)
-  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
+//  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
 
 //  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new_sorted: " << (*a)[i] << std::endl;
   delete a;
@@ -776,7 +776,7 @@ TEST(doubleT, quicksortBitshift) {
   EXPECT_TRUE(equal<double>((*a),(*tmp)));
 
   // Check if the sorted array is indeed sorted (this is actually not requires since equal also means that the sorted array is the same as the SORTED original one)
-  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
+//  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
 
 //  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new_sorted: " << (*a)[i] << std::endl;
   delete a;
@@ -808,7 +808,7 @@ TEST(doubleT, quicksort3Waypart) {
   EXPECT_TRUE(equal<double>((*a),(*tmp)));
 
   // Check if the sorted array is indeed sorted (this is actually not requires since equal also means that the sorted array is the same as the SORTED original one)
-  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
+//  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
 
 //  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new_sorted: " << (*a)[i] << std::endl;
   delete a;
@@ -840,12 +840,46 @@ TEST(doubleT, quicksortHybrid) {
   EXPECT_TRUE(equal<double>((*a),(*tmp)));
 
   // Check if the sorted array is indeed sorted (this is actually not requires since equal also means that the sorted array is the same as the SORTED original one)
+//  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
+
+//  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new_sorted: " << (*a)[i] << std::endl;
+  delete a;
+  delete tmp;
+}
+
+/*
+TEST(doubleT, quicksortHybridFull) {
+  size_t i = 0;
+  double t;
+  // Allocate memory for the array that will store all numbers from the file
+  std::array<double, SIZE> *a = new std::array<double, SIZE>(), *tmp = new std::array<double, SIZE>();
+
+  // Opens text file with random numbers and load those in both arrays
+  file.open("originalArrayDouble", std::ios::out | std::ios::in);
+  for(size_t i = 0; i < SIZE; ++i) {
+    file >> t;
+    (*a)[i] = t;
+    (*tmp)[i] = t;
+  }
+  file.close();
+
+  // Shuffle content of the original array a (not tmp!)
+  std::random_shuffle((*a).begin(), (*a).end());
+//  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new: " << (*a)[i] << std::endl;
+
+  sorting::quicksort::hybridFull::sort<double, SIZE>(*a);
+
+  // Check if the original values have remained intact after the sorting
+  EXPECT_TRUE(equal<double>((*a),(*tmp)));
+
+  // Check if the sorted array is indeed sorted (this is actually not requires since equal also means that the sorted array is the same as the SORTED original one)
   for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
 
 //  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new_sorted: " << (*a)[i] << std::endl;
   delete a;
   delete tmp;
 }
+*/
 
 TEST(intT, quicksortNormal) {
   size_t i = 0;
@@ -872,7 +906,7 @@ TEST(intT, quicksortNormal) {
   EXPECT_TRUE(equal<int>((*a),(*tmp)));
 
   // Check if the sorted array is indeed sorted (this is actually not requires since equal also means that the sorted array is the same as the SORTED original one)
-  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
+//  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
 
 //  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new_sorted: " << (*a)[i] << std::endl;
   delete a;
@@ -904,7 +938,7 @@ TEST(intT, quicksortBitshift) {
   EXPECT_TRUE(equal<int>((*a),(*tmp)));
 
   // Check if the sorted array is indeed sorted (this is actually not requires since equal also means that the sorted array is the same as the SORTED original one)
-  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
+//  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
 
 //  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new_sorted: " << (*a)[i] << std::endl;
   delete a;
@@ -936,7 +970,7 @@ TEST(intT, quicksort3Waypart) {
   EXPECT_TRUE(equal<int>((*a),(*tmp)));
 
   // Check if the sorted array is indeed sorted (this is actually not requires since equal also means that the sorted array is the same as the SORTED original one)
-  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
+//  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
 
 //  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new_sorted: " << (*a)[i] << std::endl;
   delete a;
@@ -968,12 +1002,46 @@ TEST(intT, quicksortHybrid) {
   EXPECT_TRUE(equal<int>((*a),(*tmp)));
 
   // Check if the sorted array is indeed sorted (this is actually not requires since equal also means that the sorted array is the same as the SORTED original one)
+//  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
+
+//  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new_sorted: " << (*a)[i] << std::endl;
+  delete a;
+  delete tmp;
+}
+
+/*
+TEST(intT, quicksortHybridFull) {
+  size_t i = 0;
+  int t;
+  // Allocate memory for the array that will store all numbers from the file
+  std::array<int, SIZE> *a = new std::array<int, SIZE>(), *tmp = new std::array<int, SIZE>();
+
+  // Opens text file with random numbers and load those in both arrays
+  file.open("originalArrayInteger", std::ios::out | std::ios::in);
+  for(size_t i = 0; i < SIZE; ++i) {
+    file >> t;
+    (*a)[i] = t;
+    (*tmp)[i] = t;
+  }
+  file.close();
+
+  // Shuffle content of the original array a (not tmp!)
+  std::random_shuffle((*a).begin(), (*a).end());
+//  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new: " << (*a)[i] << std::endl;
+
+  sorting::quicksort::hybridFull::sort<int, SIZE>(*a);
+
+  // Check if the original values have remained intact after the sorting
+  EXPECT_TRUE(equal<int>((*a),(*tmp)));
+
+  // Check if the sorted array is indeed sorted (this is actually not requires since equal also means that the sorted array is the same as the SORTED original one)
   for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
 
 //  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new_sorted: " << (*a)[i] << std::endl;
   delete a;
   delete tmp;
 }
+*/
 
 TEST(stringT, quickSortNormal) {
   size_t i = 0;
@@ -1000,7 +1068,7 @@ TEST(stringT, quickSortNormal) {
   EXPECT_TRUE(equal<string>((*a),(*tmp)));
 
   // Check if the sorted array is indeed sorted (this is actually not requires since equal also means that the sorted array is the same as the SORTED original one)
-  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
+//  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
 
 //  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new_sorted: " << (*a)[i] << std::endl;
   delete a;
@@ -1032,7 +1100,7 @@ TEST(stringT, quickSortBitshift) {
   EXPECT_TRUE(equal<string>((*a),(*tmp)));
 
   // Check if the sorted array is indeed sorted (this is actually not requires since equal also means that the sorted array is the same as the SORTED original one)
-  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
+//  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
 
 //  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new_sorted: " << (*a)[i] << std::endl;
   delete a;
@@ -1064,7 +1132,7 @@ TEST(stringT, quickSort3Waypart) {
   EXPECT_TRUE(equal<string>((*a),(*tmp)));
 
   // Check if the sorted array is indeed sorted (this is actually not requires since equal also means that the sorted array is the same as the SORTED original one)
-  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
+//  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
 
 //  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new_sorted: " << (*a)[i] << std::endl;
   delete a;
@@ -1096,14 +1164,46 @@ TEST(stringT, quickSortHybrid) {
   EXPECT_TRUE(equal<string>((*a),(*tmp)));
 
   // Check if the sorted array is indeed sorted (this is actually not requires since equal also means that the sorted array is the same as the SORTED original one)
-  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
+//  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
 
 //  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new_sorted: " << (*a)[i] << std::endl;
   delete a;
   delete tmp;
 }
 
+/*
+TEST(stringT, quickSortHybridFull) {
+  size_t i = 0;
+  string t;
+  // Allocate memory for the array that will store all numbers from the file
+  std::array<string, SIZE> *a = new std::array<string, SIZE>(), *tmp = new std::array<string, SIZE>();
 
+  // Opens text file with random numbers and load those in both arrays
+  file.open("originalArrayString", std::ios::out | std::ios::in);
+  for(size_t i = 0; i < SIZE; ++i) {
+    file >> t;
+    (*a)[i] = t;
+    (*tmp)[i] = t;
+  }
+  file.close();
+
+  // Shuffle content of the original array a (not tmp!)
+  std::random_shuffle((*a).begin(), (*a).end());
+//  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new: " << (*a)[i] << std::endl;
+
+  sorting::quicksort::hybridFull::sort<string, SIZE>(*a);
+
+  // Check if the original values have remained intact after the sorting
+  EXPECT_TRUE(equal<string>((*a),(*tmp)));
+
+  // Check if the sorted array is indeed sorted (this is actually not requires since equal also means that the sorted array is the same as the SORTED original one)
+//  for(i = 0; i < SIZE-1; ++i) EXPECT_LE((*a)[i],(*a)[i+1]);
+
+//  for(size_t i = 0; i < SIZE; ++i) std::cout << "old: " << (*tmp)[i] << " | new_sorted: " << (*a)[i] << std::endl;
+  delete a;
+  delete tmp;
+}
+*/
 
 //int main(int argc, char **argv) {
 int main(int argc, char **argv) {
@@ -1111,61 +1211,20 @@ int main(int argc, char **argv) {
   // Measure times
   std::chrono::high_resolution_clock::time_point begin, end;
   std::fstream file;
+  size_t i;
 
   // Values are in ascending order
   //  - double ascending array will also be used for the time measurement
   double startD = -SIZE/2;
   file.open("originalArrayDouble", std::ios::out | std::ios::trunc);
-  for(size_t i = 0; i < SIZE; ++i, startD += 1.0123456789) file << startD << std::endl;
+  for(i = 0; i < SIZE; ++i, startD += 1.0123456789) file << startD << std::endl;
   file.close();
 
   int startI = -SIZE/2;
   file.open("originalArrayInteger", std::ios::out | std::ios::trunc);
-  for(size_t i = 0; i < SIZE; ++i, ++startI) file << startI << std::endl;
+  for(i = 0; i < SIZE; ++i, ++startI) file << startI << std::endl;
   file.close();
 
-  std::string startStr = "a";
-
-
-
-  /*
-  // RANDOM double
-  std::random_device randDoubleDevice, randomIntegerDevice;
-  std::mt19937 engI(randomIntegerDevice());
-  std::mt19937 engD(randDoubleDevice());
-  std::uniform_int_distribution<int> distInt(-9999999, 9999999);
-  std::uniform_real_distribution<double> distDouble(-9999999.9999999, 9999999.9999999);  //(min, max)
-  std::fstream file;
-  size_t i;
-
-  std::array<double, SIZE> *doubleArr = new std::array<double, SIZE>();
-  file.open("randomDouble", std::ios::out | std::ios::trunc);
-  for(i = 0; i < SIZE; ++i) {
-    double mean = distDouble(engD);
-    file << mean << "\n";
-    (*doubleArr)[i] = mean;
-  }
-  file.close();
-
-  std::array<double, SIZE> *doubleArr2 = new std::array<double, SIZE>();
-  std::copy_n((*doubleArr).begin(), SIZE, (*doubleArr2).begin());
-  begin = std::chrono::high_resolution_clock::now();
-  sorting::insertionsort::normal::sort(*doubleArr);
-  for(i = 0; i < SIZE; ++i) { std::cout << "OLD: " << (*doubleArr2)[i] << " | NEW: " << (*doubleArr)[i] << std::endl; }
-  end = std::chrono::high_resolution_clock::now();
-  std::cout << "Estimated sorting time: " << (double)std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count() << "ms" << std::endl;
-
-  delete doubleArr;
-
-  std::array<int, SIZE> *intArr = new std::array<int, SIZE>();
-  file.open("randomInteger", std::ios::out | std::ios::trunc);
-  for(i = 0; i < SIZE; ++i) file << distInt(engI) << "\n";
-  file.close();
-  delete intArr;
-
-  */
-
-  size_t i;
   std::array<std::string, SIZE> *strArr = new std::array<std::string, SIZE>();
   for(i = 0; i < SIZE; ++i) (*strArr)[i] = testing::randstr(100);
 
@@ -1174,18 +1233,6 @@ int main(int argc, char **argv) {
   for(i = 0; i < SIZE; ++i) file << (*strArr)[i] << "\n";
   file.close();
   delete strArr;
-/*
-//  double startValueD = 0-SIZE/2+.00000000009;
-//  std::array<double, SIZE> *a = new std::array<double, SIZE>();
-//  for(size_t i = 0; i < SIZE; ++i, ++startValueD) (*a)[i] = startValueD;
-//  delete a;
-
-//  startValueD = SIZE/2;
-//  a = new std::array<double, SIZE>();
-//  for(size_t i = SIZE-1; i > 0; --i, startValueD-=1.0123456789) (*a)[i] = startValueD;
-//  std::cout << "***************************************************" << std::endl;
-////  for(size_t i = 0; i < SIZE-1; ++i) { std::cout << (*a)[i] << std::endl; }
-//  delete a;*/
 
   ::testing::InitGoogleTest( &argc, argv );
   return RUN_ALL_TESTS();
