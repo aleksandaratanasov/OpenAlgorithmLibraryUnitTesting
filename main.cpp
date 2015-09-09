@@ -5,7 +5,6 @@
 #include <random>
 #include <algorithm>
 #include <unordered_map>
-#include <chrono>
 #include <gtest.h>
 #include <string>
 #include <fstream>
@@ -1208,8 +1207,6 @@ TEST(stringT, quickSortHybridFull) {
 //int main(int argc, char **argv) {
 int main(int argc, char **argv) {
   // Create all files with values that will be required by the different test
-  // Measure times
-  std::chrono::high_resolution_clock::time_point begin, end;
   std::fstream file;
   size_t i;
 
